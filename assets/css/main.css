@@ -47,8 +47,8 @@
 }
 
 .form-control {
-  background-color: #b6e0a3;
-  color: #000000;
+  background-color: #b6e0a3 !important;
+  color: #000000 !important;
 }
 
 .btn {
