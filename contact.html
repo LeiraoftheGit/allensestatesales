@@ -7,6 +7,7 @@
   <title>Contact - Allen's Estate Sales</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -182,34 +183,50 @@
         </div>
 
         <!-- Contact Form -->
-        <form action="https://formsubmit.co/allensestatesales@gmail.com" method="POST">
-                  <div class="row gy-4">
-                    <div class="col-md-6">
-                      <input type="text" class="form-control" name="name" placeholder="Name" required="">
-                    </div>
-                    <div class="col-md-6">
-                      <input type="email" class="form-control" name="email" placeholder="Email" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address">
-                      <div class="email-error" style="color: rgb(0, 79, 46); display: none;">Please enter a valid email address.</div>
-                    </div>
-                    <div class="col-md-6">
-                      <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                    </div>
-                    <div class="col-md-6">
-                      <input type="text" class="form-control" name="phone" placeholder="Phone Number" required="" pattern="^\+?[1-9]\d{1,14}$" title="Please enter a valid phone number">
-                      <div class="phone-error" style="color: rgb(0, 79, 46); display: none;">Please enter a valid phone number.</div>
-                    </div>
-                    <div class="col-md-12">
-                      <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                    </div>
-                    <div class="col-md-12 text-center">
-                      <div class="loading" style="display: none;">Loading</div>
-                      <div class="error-message" style="display: none;">There was an error sending your message. Please try again later.</div>
-                      <div class="sent-message" style="display: none;">Your message has been sent. Thank you!</div>
-                      <button type="submit">Send Message</button>
-                    </div>
-                  </div>
-                </form><!-- End Contact Form -->
+        <!-- Contact Form -->
+      <form id="contact-form" action="https://formsubmit.co/allensestatesales@gmail.com" method="POST">
+        <div class="row gy-4">
+          <div class="col-md-6">
+            <input type="text" class="form-control" name="name" placeholder="Name" required="">
+          </div>
+          <div class="col-md-6">
+            <input type="email" class="form-control" name="email" placeholder="Email" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address">
+            <div class="email-error" style="color: rgb(0, 79, 46); display: none;">Please enter a valid email address.</div>
+        </div>
+        <div class="col-md-6">
+          <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+        </div>
+        <div class="col-md-6">
+          <input type="text" class="form-control" name="phone" placeholder="Phone Number" required="" pattern="^\+?[1-9]\d{1,14}$" title="Please enter a valid phone number">
+          <div class="phone-error" style="color: rgb(0, 79, 46); display: none;">Please enter a valid phone number.</div>
+        </div>
+        <div class="col-md-12">
+          <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+        </div>
+        <div class="col-md-12 text-center">
+          <div class="g-recaptcha" data-sitekey="6LcFMDQqAAAAAEEMoWOpnQ_s71fiP77xIj4Y6gGZ"></div>
+          <div class="loading" style="display: none;">Loading</div>
+          <div class="error-message" style="display: none;">There was an error sending your message. Please try again later.</div>
+          <div class="sent-message" style="display: none;">Your message has been sent. Thank you!</div>
+          <button type="submit">Send Message</button>
+        </div>
+      </div>
+    </form><!-- End Contact Form -->
 
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      const phoneInput = document.querySelector('input[name="phone"]');
+      const phoneError = document.querySelector('.phone-error');
+      const phonePattern = /^\+?[1-9]\d{1,14}$/;
+
+      if (!phonePattern.test(phoneInput.value)) {
+        phoneError.style.display = 'block';
+        event.preventDefault(); // Prevent form submission
+      } else {
+        phoneError.style.display = 'none';
+      }
+    });
+  </script>
       </div>
 
     </section><!-- /Contact Section -->
