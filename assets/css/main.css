@@ -135,10 +135,17 @@ h6 {
 .header {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 0px 0;
+  padding: 10px 0;
   transition: all 0.5s;
   z-index: 997;
   border-bottom: 10px solid var(--surface-color);
+}
+
+.container-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .header .logo {
@@ -188,7 +195,8 @@ h6 {
 
 @media (max-width: 1200px) {
   .header .logo {
-    order: 20;
+    display: flex;
+    align-items: center;
   }
 
   .header .logo h1 {
@@ -200,7 +208,8 @@ h6 {
   }
 
   .header .header-social-links {
-    order: 2;
+    display: flex;
+    align-items: center;
   }
 
   .header .header-social-links a {
@@ -208,7 +217,8 @@ h6 {
   }
 
   .header .navmenu {
-    order: 3;
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -224,9 +234,11 @@ h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Navmenu - Desktop */
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
   .navmenu {
     padding: 0;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .navmenu ul {
@@ -235,6 +247,8 @@ h6 {
     display: flex;
     list-style: none;
     align-items: center;
+    flex-direction: column;
+    width: 100%;
   }
 
   .navmenu li {
@@ -291,7 +305,7 @@ h6 {
   }
 
   .navmenu .dropdown ul li {
-    min-width: 200px;
+    min-width: 5px 0;
   }
 
   .navmenu .dropdown ul a {
