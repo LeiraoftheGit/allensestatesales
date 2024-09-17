@@ -6,7 +6,7 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #0d6738;        /* Background color for the entire website, including individual sections */
+  --background-color: #0d6738;      /* Background color for the entire website, including individual sections */
   --background-color-light: #b6e0a3;  /* A lighter version of the background color, used for hover effects and other elements that need a lighter shade of the background color */
   --background-color-light-text: #013615; /* Text color used on top of the background-color-light */
   --default-color: #ffffff;           /* Default color used for the majority of the text content across the entire website */
@@ -52,16 +52,16 @@
 }
 
 .btn {
-  --background-color: var(--accent-color);  /* Overrides the global background color */
+  --background-color: rgb(151, 192, 69);
   --default-color: #ffffff;     /* Overrides the global default text color */
   --heading-color: #ffffff;     /* Overrides the global heading color */
-  --surface-color: #00a123;     /* Overrides the global surface color */
+  --surface-color: #008d1f;     /* Overrides the global surface color */
   --contrast-color: #ffffff;    /* Overrides the global contrast color */
   
   background-color: var(--background-color);
   color: var(--default-color);
   border: 1px solid var(--surface-color);
-  padding: 10px 20px;
+  padding: 10px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -73,6 +73,7 @@
 
 .btn:hover {
   background-color: color-mix(in srgb, var(--accent-color) 90%, white 10%);
+  border-color: #042908;
   color: var(--default-color);
 }
 .cta-btn {
@@ -84,6 +85,7 @@
   font-size: 16px; /* Larger font size */
   cursor: pointer; /* Pointer cursor on hover */
   transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  text-align: center;
 }
 
 .cta-btn:hover {
@@ -102,10 +104,10 @@ body {
   color: var(--default-color);               /* Set the default text color */
   background-color: var(--background-color); /* Set the default background color */
   font-family: var(--default-font);          /* Set the default font */
-  /* background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='800' preserveAspectRatio='none' viewBox='0 0 1440 800'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1128%26quot%3b)' fill='none'%3e%3crect width='1440' height='800' x='0' y='0' fill='rgba(168%2c 242%2c 156%2c 1)'%3e%3c/rect%3e%3cpath d='M1464 800L0 800 L0 640.6Q68.53 589.13%2c 120 657.67Q191.06 608.73%2c 240 679.8Q282.92 650.72%2c 312 693.64Q353.72 615.36%2c 432 657.08Q474.58 627.66%2c 504 670.25Q549.1 643.35%2c 576 688.44Q592.22 632.66%2c 648 648.89Q722.03 602.92%2c 768 676.96Q796.51 633.48%2c 840 661.99Q889.59 639.58%2c 912 689.17Q966.29 623.46%2c 1032 677.76Q1083.82 609.58%2c 1152 661.39Q1206.2 595.59%2c 1272 649.78Q1328.61 634.38%2c 1344 690.99Q1394.73 621.72%2c 1464 672.45z' fill='rgba(184%2c 255%2c 196%2c 1)'%3e%3c/path%3e%3cpath d='M1488 800L0 800 L0 687.04Q70.12 637.15%2c 120 707.27Q163.06 678.33%2c 192 721.39Q232.94 642.33%2c 312 683.27Q355.68 654.95%2c 384 698.64Q456.81 651.45%2c 504 724.27Q521.51 669.78%2c 576 687.3Q646.97 638.26%2c 696 709.23Q750.36 643.59%2c 816 697.95Q868.66 630.61%2c 936 683.27Q1012.38 639.64%2c 1056 716.02Q1108.36 648.38%2c 1176 700.73Q1228.04 632.77%2c 1296 684.81Q1352.78 669.59%2c 1368 726.36Q1413.64 652%2c 1488 697.65z' fill='rgba(64%2c 189%2c 78%2c 1)'%3e%3c/path%3e%3cpath d='M1512 800L0 800 L0 725.82Q60.19 714.01%2c 72 774.19Q125.78 707.98%2c 192 761.76Q209.4 707.16%2c 264 724.57Q329.02 669.6%2c 384 734.62Q457.59 688.21%2c 504 761.81Q520.08 705.89%2c 576 721.97Q649.38 675.36%2c 696 748.74Q768.87 701.61%2c 816 774.47Q826.91 713.38%2c 888 724.29Q957.5 673.79%2c 1008 743.29Q1078.75 694.04%2c 1128 764.79Q1142.42 707.21%2c 1200 721.64Q1241.47 691.11%2c 1272 732.57Q1346.13 686.71%2c 1392 760.84Q1459.38 708.22%2c 1512 775.59z' fill='rgba(28%2c 155%2c 43%2c 1)'%3e%3c/path%3e%3cpath d='M1512 800L0 800 L0 786.36Q40.37 754.74%2c 72 795.11Q98.14 749.25%2c 144 775.4Q196.6 708%2c 264 760.6Q313.18 737.78%2c 336 786.95Q366.56 745.51%2c 408 776.07Q461.48 709.55%2c 528 763.03Q602.82 717.85%2c 648 792.66Q674.37 747.03%2c 720 773.4Q773.14 754.54%2c 792 807.68Q821.66 765.34%2c 864 794.99Q907.13 718.12%2c 984 761.25Q1043.97 749.22%2c 1056 809.19Q1079.16 760.36%2c 1128 783.52Q1180.94 716.46%2c 1248 769.4Q1299.78 749.18%2c 1320 800.97Q1372.52 733.49%2c 1440 786Q1468.02 742.02%2c 1512 770.05z' fill='rgba(1%2c 75%2c 11%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1128'%3e%3crect width='1440' height='800' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");                     /* Path to your background image */
-  background-size: cover;       /* Make sure the image covers the entire body */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
-  background-position: center;  /* Center the image */
+  /* background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='800' preserveAspectRatio='none' viewBox='0 0 1440 800'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1128%26quot%3b)' fill='none'%3e%3crect width='1440' height='800' x='0' y='0' fill='rgba(168%2c 242%2c 156%2c 1)'%3e%3c/rect%3e%3cpath d='M1464 800L0 800 L0 640.6Q68.53 589.13%2c 120 657.67Q191.06 608.73%2c 240 679.8Q282.92 650.72%2c 312 693.64Q353.72 615.36%2c 432 657.08Q474.58 627.66%2c 504 670.25Q549.1 643.35%2c 576 688.44Q592.22 632.66%2c 648 648.89Q722.03 602.92%2c 768 676.96Q796.51 633.48%2c 840 661.99Q889.59 639.58%2c 912 689.17Q966.29 623.46%2c 1032 677.76Q1083.82 609.58%2c 1152 661.39Q1206.2 595.59%2c 1272 649.78Q1328.61 634.38%2c 1344 690.99Q1394.73 621.72%2c 1464 672.45z' fill='rgba(184%2c 255%2c 196%2c 1)'%3e%3c/path%3e%3cpath d='M1488 800L0 800 L0 687.04Q70.12 637.15%2c 120 707.27Q163.06 678.33%2c 192 721.39Q232.94 642.33%2c 312 683.27Q355.68 654.95%2c 384 698.64Q456.81 651.45%2c 504 724.27Q521.51 669.78%2c 576 687.3Q646.97 638.26%2c 696 709.23Q750.36 643.59%2c 816 697.95Q868.66 630.61%2c 936 683.27Q1012.38 639.64%2c 1056 716.02Q1108.36 648.38%2c 1176 700.73Q1228.04 632.77%2c 1296 684.81Q1352.78 669.59%2c 1368 726.36Q1413.64 652%2c 1488 697.65z' fill='rgba(64%2c 189%2c 78%2c 1)'%3e%3c/path%3e%3cpath d='M1512 800L0 800 L0 725.82Q60.19 714.01%2c 72 774.19Q125.78 707.98%2c 192 761.76Q209.4 707.16%2c 264 724.57Q329.02 669.6%2c 384 734.62Q457.59 688.21%2c 504 761.81Q520.08 705.89%2c 576 721.97Q649.38 675.36%2c 696 748.74Q768.87 701.61%2c 816 774.47Q826.91 713.38%2c 888 724.29Q957.5 673.79%2c 1008 743.29Q1078.75 694.04%2c 1128 764.79Q1142.42 707.21%2c 1200 721.64Q1241.47 691.11%2c 1272 732.57Q1346.13 686.71%2c 1392 760.84Q1459.38 708.22%2c 1512 775.59z' fill='rgba(28%2c 155%2c 43%2c 1)'%3e%3c/path%3e%3cpath d='M1512 800L0 800 L0 786.36Q40.37 754.74%2c 72 795.11Q98.14 749.25%2c 144 775.4Q196.6 708%2c 264 760.6Q313.18 737.78%2c 336 786.95Q366.56 745.51%2c 408 776.07Q461.48 709.55%2c 528 763.03Q602.82 717.85%2c 648 792.66Q674.37 747.03%2c 720 773.4Q773.14 754.54%2c 792 807.68Q821.66 765.34%2c 864 794.99Q907.13 718.12%2c 984 761.25Q1043.97 749.22%2c 1056 809.19Q1079.16 760.36%2c 1128 783.52Q1180.94 716.46%2c 1248 769.4Q1299.78 749.18%2c 1320 800.97Q1372.52 733.49%2c 1440 786Q1468.02 742.02%2c 1512 770.05z' fill='rgba(1%2c 75%2c 11%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1128'%3e%3crect width='1440' height='800' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 a {
@@ -217,6 +219,7 @@ h6 {
   }
 
   .header .navmenu {
+    list-style-type: none;
     display: flex;
     align-items: center;
   }
@@ -230,15 +233,30 @@ h6 {
   background-color: var(--background-color);
 }
 
+.responsive-link-image1 {
+  width: 289px;
+  height: 49px;
+}
+
+@media (max-width: 768px) {
+  .responsive-image {
+    width: 120px;
+    height: auto;
+  }
+}
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Navmenu - Desktop */
-@media (max-width: 1200px) {
+@media (min-width: 1200px) {
   .navmenu {
     padding: 0;
-    flex-direction: column;
-    align-items: flex-start;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
   }
 
   .navmenu ul {
@@ -247,12 +265,16 @@ h6 {
     display: flex;
     list-style: none;
     align-items: center;
-    flex-direction: column;
-    width: 100%;
+    flex-direction: row;
   }
 
   .navmenu li {
     position: relative;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100%; /* Ensure full width for better alignment */
   }
 
   .navmenu a,
@@ -269,6 +291,7 @@ h6 {
     transition: 0.3s;
     text-transform: uppercase;
     letter-spacing: 1px;
+    width: 100%; /* Ensure full width for better alignment */
   }
 
   .navmenu a i,
@@ -283,7 +306,7 @@ h6 {
     padding-right: 0;
   }
 
-  .navmenu li:hover>a,
+  .navmenu li:hover > a,
   .navmenu .active,
   .navmenu .active:focus {
     color: var(--nav-hover-color);
@@ -293,19 +316,21 @@ h6 {
     margin: 0;
     padding: 10px 0;
     background: var(--nav-dropdown-background-color);
-    display: block;
+    list-style-type: none;
+    display: flex;
     position: absolute;
     visibility: hidden;
-    left: 14px;
-    top: 130%;
+    left: 0;
+    top: 100%;
     opacity: 0;
     transition: 0.3s;
     border-radius: 4px;
     z-index: 99;
+    flex-direction: column;
   }
 
   .navmenu .dropdown ul li {
-    min-width: 5px 0;
+    min-width: 150px; /* Set a reasonable min-width */
   }
 
   .navmenu .dropdown ul a {
@@ -321,11 +346,11 @@ h6 {
 
   .navmenu .dropdown ul a:hover,
   .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover>a {
+  .navmenu .dropdown ul li:hover > a {
     color: var(--nav-dropdown-hover-color);
   }
 
-  .navmenu .dropdown:hover>ul {
+  .navmenu .dropdown:hover > ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -333,16 +358,31 @@ h6 {
 
   .navmenu .dropdown .dropdown ul {
     top: 0;
-    left: -90%;
+    left: -100%; /* Adjust for better alignment */
     visibility: hidden;
   }
 
-  .navmenu .dropdown .dropdown:hover>ul {
+  .navmenu .dropdown .dropdown:hover > ul {
     opacity: 1;
     top: 0;
     left: -100%;
     visibility: visible;
   }
+}
+/* Mobile Styles */
+@media (max-width: 1199px) {
+
+  .logo {
+  order: 1;
+  text-size-adjust: 60%;
+}
+
+.navmenu {
+  order: 2;
+}
+.header-social-links {
+  order: 3;
+}
 }
 
 /* Navmenu - Mobile */
@@ -350,6 +390,9 @@ h6 {
   .mobile-nav-toggle {
     color: var(--nav-color);
     font-size: 28px;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
     line-height: 0;
     margin-right: 10px;
     cursor: pointer;
@@ -498,6 +541,7 @@ h6 {
 .text-box-3 {
     opacity: 1; /* 100% opacity (fully opaque) */
 }
+
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
@@ -716,6 +760,7 @@ h6 {
   background: var(--accent-color);
   font-weight: 400;
   font-size: 14px;
+  text-align: center;
   display: inline-block;
   margin-top: 20px;
   padding: 12px 40px;
@@ -874,6 +919,7 @@ section,
   background: var(--accent-color);
   font-weight: 400;
   font-size: 14px;
+  text-align: center;
   display: inline-block;
   padding: 12px 40px;
   border-radius: 4px;
