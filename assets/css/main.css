@@ -238,11 +238,50 @@ h6 {
   height: 49px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1199px) {
   .responsive-image {
     width: 120px;
     height: auto;
   }
+
+/* Adjust header layout for mobile screens */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header .container-fluid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header .logo {
+  margin-bottom: 10px; /* Add some space between the logo and the nav menu */
+}
+
+.header .navmenu {
+  width: 100%; /* Ensure the nav menu takes full width */
+  text-align: center; /* Center the nav menu items */
+}
+
+.header .navmenu ul {
+  display: flex;
+  flex-direction: column; /* Stack the nav menu items vertically */
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.header .navmenu ul li {
+  margin: 5px 0; /* Add some space between the nav menu items */
+}
+
+.header .header-social-links {
+  margin-top: 10px; /* Add some space between the nav menu and social links */
+}
 }
 
 /*--------------------------------------------------------------
