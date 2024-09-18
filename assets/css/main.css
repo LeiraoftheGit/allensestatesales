@@ -219,7 +219,7 @@ h6 {
   }
 
   .header .navmenu {
-    list-style-type: none;
+    list-style: none;
     display: flex;
     align-items: center;
   }
@@ -261,14 +261,9 @@ h6 {
   margin-bottom: 10px; /* Add some space between the logo and the nav menu */
 }
 
-.header .navmenu {
-  width: 100%; /* Ensure the nav menu takes full width */
-  text-align: center; /* Center the nav menu items */
-}
-
 .header .navmenu ul {
   display: flex;
-  flex-direction: column; /* Stack the nav menu items vertically */
+  flex-direction: row; /* Stack the nav menu items vertically */
   align-items: center;
   padding: 0;
   margin: 0;
@@ -290,29 +285,24 @@ h6 {
 /* Navmenu - Desktop */
 @media (min-width: 1200px) {
   .navmenu {
-    padding: 0;
-    margin: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     list-style: none;
+    padding: 0;
+    margin: 0;
   }
 
   .navmenu ul {
-    margin: 0;
-    padding: 0;
     display: flex;
     list-style: none;
-    align-items: center;
-    flex-direction: row;
+    padding: 0;
+    margin: 0;
   }
 
   .navmenu li {
-    position: absolute;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
+    margin: 0 2px;
   }
 
   .navmenu a,
@@ -368,7 +358,7 @@ h6 {
   }
 
   .navmenu .dropdown ul li {
-    min-width: 150px; /* Set a reasonable min-width */
+    min-width: 150px;
   }
 
   .navmenu .dropdown ul a {
@@ -442,12 +432,81 @@ h6 {
 
 /* Navmenu - Mobile */
 @media (max-width: 1199px) {
+  
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .header .container-fluid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .header .logo {
+    margin-bottom: 10px;
+  }
+
+  .header .navmenu {
+    width: 100%;
+    text-align: center;
+    display: none;
+    background-color: #d9fa8e;
+    padding: 10px 0;
+  }
+
+  .header .navmenu.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header .navmenu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+  }
+
+  .header .navmenu ul li {
+    margin: 5px 0;
+  }
+  
+  .header .navmenu a {
+    display: block;
+    padding: 10px 15px; 
+    font-size: 16px; 
+    color: #012704; 
+    text-decoration: none; 
+    width: 100%; 
+    background-color: #d9fa8e; 
+  }
+
+  .header .navmenu a:hover {
+    background-color: #d9fa8e;
+    color: #024b08;
+  }
+
+  .header .navmenu .dropdown ul {
+    display: none;
+    position: static;
+    background-color: #d9fa8e;
+    border: none;
+    box-shadow: none;
+  }
+
+  .header .header-social-links {
+    margin-top: 10px;
+  }
+
   .mobile-nav-toggle {
     color: var(--nav-color);
     font-size: 28px;
     padding: 10px;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     line-height: 0;
     margin-right: 10px;
     cursor: pointer;
@@ -456,7 +515,7 @@ h6 {
 
   .navmenu {
     padding: 0;
-    z-index: 9997;
+    /* z-index: 9997; */
   }
 
   .navmenu ul {
