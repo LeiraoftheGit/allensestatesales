@@ -76,6 +76,33 @@
   border-color: #042908;
   color: var(--default-color);
 }
+
+.btn1 {
+  --background-color: rgb(109, 188, 44);
+  --default-color: #ffffff;     /* Overrides the global default text color */
+  --heading-color: #ffffff;     /* Overrides the global heading color */
+  --surface-color: #008d1f;     /* Overrides the global surface color */
+  --contrast-color: #ffffff;    /* Overrides the global contrast color */
+  
+  background-color: var(--background-color);
+  color: var(--default-color);
+  border: 1px solid var(--surface-color);
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn1:hover {
+  background-color: color-mix(in srgb, var(--accent-color) 90%, white 10%);
+  border-color: #042908;
+  color: var(--default-color);
+}
+
 .cta-btn {
   background-color: #00a123; /* Bright color to attract attention */
   color: #ffffff; /* White text for contrast */
@@ -141,7 +168,7 @@ h6 {
   background-color: var(--background-color);
   padding: 10px 0;
   transition: all 0.5s;
-  z-index: 997;
+  z-index: 9997;
   border-bottom: 10px solid var(--surface-color);
 }
 
@@ -178,7 +205,7 @@ h6 {
 }
 
 .header .header-social-links {
-  padding-right: 15px;
+  padding-right: 0;
 }
 
 .header .header-social-links a {
@@ -1623,6 +1650,12 @@ section,
     text-decoration: none; /* Remove underline */
     font-weight: bold;
   }
+
+  .accordion .card-header .btn:hover,
+.accordion .card-header .btn:focus,
+.accordion .card-header .btn:active {
+  background-color: var(--surface-color); /* Background color when active, focused, or hovered */
+}
 
   .accordion .card-header .btn:hover {
     color: var(--default-color);
