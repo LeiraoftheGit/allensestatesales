@@ -53,6 +53,29 @@
   });
 
   /**
+   * Faq Accordion
+   */
+  document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.faq-button');
+  
+    buttons.forEach(button => {
+      button.addEventListener('click', function() {
+        // Check if the clicked button is already active
+        if (this.classList.contains('active')) {
+          // If it is, remove the 'active' class
+          this.classList.remove('active');
+        } else {
+          // Remove the 'active' class from all buttons
+          buttons.forEach(btn => btn.classList.remove('active'));
+  
+          // Add the 'active' class to the clicked button
+          this.classList.add('active');
+        }
+      });
+    });
+  });
+
+  /**
    * Preloader
    */
   const preloader = document.querySelector('#preloader');

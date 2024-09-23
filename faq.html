@@ -51,7 +51,7 @@
       </nav>
 
       <div class="header-social-links">
-        <a href="feedback.html" class="btn1 ms-3">Review Us</a>
+        <a href="feedback.html" class="btn">Review Us</a>
         <a href="https://www.estatesales.net/companies/MI/Lansing/48915/164144">
           <img src="https://www.estatesales.net/assets/images/logos/dark75.png" alt="EstateSales.NET" class="responsive-link-image1">
         </a>
@@ -87,6 +87,9 @@
           </h6>
       </div>
     </div>
+    <div class="btn-container"></div>
+      <a class="btn" href="#SalesIFrame">Click to view Upcoming Sales</a>
+    </div>
 </section>
 
     <!-- Page Title -->
@@ -97,7 +100,9 @@
             <div class="col-lg-8">
               <h1>FAQ</h1>
               <p class="mb-0">Welcome to our Estate Sale FAQ page, where we aim to provide clear and concise answers to your most pressing questions. Whether you're a first-time visitor curious about how estate sales work, or a seasoned shopper looking for specific details, we've got you covered.</p>
-              <a href="contact.html" class="cta-btn">Available to Schedule<br></a>
+              <div class="btn-container">
+                <a href="contact.html" class="btn">Available to Schedule<br></a>
+              </div>
             </div>
           </div>
         </div>
@@ -129,13 +134,13 @@
     <div class="card">
       <div class="card-header" id="headingOne">
         <h2 class="mb-0">
-          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <button class="faq-button" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
             How long does a typical estate sale last?
           </button>
         </h2>
       </div>
 
-      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
+      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#faqAccordion">
         <div class="card-body">
           Most estate sales run from two or three days.  There is no typical estate sale they are all different and unique.  The largest determining factor is the amount of merchandise to be sold.
         </div>
@@ -144,7 +149,7 @@
     <div class="card">
       <div class="card-header" id="headingTwo">
         <h2 class="mb-0">
-          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <button class="faq-button" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
             How do I schedule an estate sale?
           </button>
         </h2>
@@ -158,7 +163,7 @@
     <div class="card">
       <div class="card-header" id="headingThree">
         <h2 class="mb-0">
-          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <button class="faq-button" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
             How much does it cost to have an estate sale?
           </button>
         </h2>
@@ -193,6 +198,22 @@
 
   </footer>
 
+  <script>
+    window.esIFrameOptions = {
+    containerId: 'SalesIFrame', orgId: 164144, showPastSales: false};
+   
+    function addScriptToDom(id, url, async, d, s) {
+    if (d.getElementById(id)) return;
+    var e = d.createElement(s);
+    e.id = id;
+    e.type = 'text/javascript';
+    e.async = async;
+    e.src = url;
+    d.getElementsByTagName('body')[0].appendChild(e);
+    }
+   
+      addScriptToDom('esNETIFrame', 'https://www.estatesales.net/assets_/scripts/iframe/iframe-helper.js', true, document, 'script');
+    </script>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

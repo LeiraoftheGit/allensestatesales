@@ -19,7 +19,7 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #013615;                     /* The default color of the main navmenu links */
+  --nav-color: var(--background-color-light-text); /* Main navmenu links */
   --nav-hover-color: #5e9c2b;               /* Applied to main navmenu links when they are hovered over or active */
   /* --nav-mobile-background-color: #00331f;     Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #2a734d; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
@@ -53,13 +53,13 @@
 
 .btn {
   --background-color: rgb(109, 188, 44);
-  --default-color: #ffffff;     /* Overrides the global default text color */
-  --heading-color: #ffffff;     /* Overrides the global heading color */
-  --surface-color: #008d1f;     /* Overrides the global surface color */
-  --contrast-color: #ffffff;    /* Overrides the global contrast color */
+  --default-color: #ffffff;     /* Global default text color */
+  --heading-color: #ffffff;     /* Global heading color */
+  --surface-color: #008d1f;     /* Global surface color */
+  --contrast-color: #ffffff;    /* Global contrast color */
   
   background-color: var(--background-color);
-  color: var(--default-color);
+  color: color-mix(in srgb, #013615, transparent 10%);
   border: 1px solid var(--surface-color);
   padding: 10px 10px;
   text-align: center;
@@ -69,6 +69,8 @@
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 4px;
+  min-width: 80px;
+  white-space: nowrap;
 }
 
 .btn:hover {
@@ -79,10 +81,10 @@
 
 .btn1 {
   --background-color: rgb(109, 188, 44);
-  --default-color: #ffffff;     /* Overrides the global default text color */
-  --heading-color: #ffffff;     /* Overrides the global heading color */
-  --surface-color: #008d1f;     /* Overrides the global surface color */
-  --contrast-color: #ffffff;    /* Overrides the global contrast color */
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --surface-color: #008d1f;
+  --contrast-color: #ffffff;
   
   background-color: var(--background-color);
   color: var(--default-color);
@@ -104,19 +106,60 @@
 }
 
 .cta-btn {
-  background-color: #00a123; /* Bright color to attract attention */
-  color: #ffffff; /* White text for contrast */
-  padding: 10px 20px; /* Padding for a larger clickable area */
-  border: none; /* Remove default border */
-  border-radius: 5px; /* Rounded corners */
-  font-size: 16px; /* Larger font size */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  background-color: #00a123;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
   text-align: center;
 }
 
 .cta-btn:hover {
-  background-color: #008b1e; /* Darker shade on hover */
+  background-color: #008b1e;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.faq-button {
+  --background-color: rgb(109, 188, 44);
+  --default-color: color-mix(in srgb, #013615, transparent 10%);
+  --heading-color: #ffffff;
+  --surface-color: #008d1f;
+  --contrast-color: #ffffff;
+  
+  background-color: transparent;
+  color: color-mix(in srgb, #013615, transparent 10%);
+  border: none;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  min-width: 80px;
+  white-space: nowrap;
+  box-shadow: none;
+}
+
+.faq-button:hover {
+  background-color: var(--background-color);
+  border: 1px solid var(--surface-color);
+  color: #ffffff;
+}
+
+.faq-button.active {
+  background-color: var(--background-color);
+  border: 1px solid var(--surface-color);
 }
 
 /* Smooth scroll */
@@ -863,8 +906,6 @@ h6 {
 }
 
 .page-title .heading .cta-btn {
-  color: var(--default-color);
-  background: var(--accent-color);
   font-weight: 400;
   font-size: 14px;
   text-align: center;
@@ -875,10 +916,6 @@ h6 {
   transition: 0.5s;
   text-transform: uppercase;
   letter-spacing: 1px;
-}
-
-.page-title .heading .cta-btn:hover {
-  background-color: color-mix(in srgb, var(--accent-color) 90%, white 10%);
 }
 
 .page-title nav {
@@ -1022,8 +1059,6 @@ section,
 }
 
 .hero .btn-get-started {
-  color: var(--contrast-color);
-  background: var(--accent-color);
   font-weight: 400;
   font-size: 14px;
   text-align: center;
@@ -1033,10 +1068,6 @@ section,
   transition: 0.5s;
   text-transform: uppercase;
   letter-spacing: 1px;
-}
-
-.hero .btn-get-started:hover {
-  background-color: color-mix(in srgb, var(--accent-color) 90%, white 10%);
 }
 
 /*--------------------------------------------------------------
@@ -1186,49 +1217,6 @@ section,
   .feedback .php-email-form {
     padding: 20px;
   }
-}
-
-.feedback .php-email-form input[type=text],
-.feedback .php-email-form input[type=email],
-.feedback .php-email-form textarea {
-  font-size: 14px;
-  padding: 10px 15px;
-  box-shadow: none;
-  border-radius: 0;
-  color: var(--default-color);
-  background-color: var(--surface-color);
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
-}
-
-.feedback .php-email-form input[type=text]:focus,
-.feedback .php-email-form input[type=email]:focus,
-.feedback .php-email-form textarea:focus {
-  border-color: var(--accent-color);
-}
-
-.feedback .php-email-form input[type=text]::placeholder,
-.feedback .php-email-form input[type=email]::placeholder,
-.feedback .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
-}
-
-.feedback .php-email-form button[type=submit] {
-  color: var(--default-color);
-  background: var(--accent-color);
-  font-weight: 400;
-  font-size: 14px;
-  display: inline-block;
-  margin-top: 20px;
-  padding: 14px 40px;
-  border: 0;
-  border-radius: 4px;
-  transition: 0.5s;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.feedback .php-email-form button[type=submit]:hover {
-  background-color: color-mix(in srgb, var(--accent-color) 90%, white 10%);
 }
 
 /*--------------------------------------------------------------
@@ -1654,8 +1642,19 @@ section,
   .accordion .card-header .btn:hover,
 .accordion .card-header .btn:focus,
 .accordion .card-header .btn:active {
-  background-color: var(--surface-color); /* Background color when active, focused, or hovered */
-}
+    color: #0d5501;
+  }
+
+  .accordion .card-body {
+    background-color: var(--surface-color);     /* Dark Blue background */
+    padding: 15px;                   /* Padding inside the card body */
+  }
+
+  .accordion .card {
+    border: none;        /* Remove card border */
+    margin-bottom: 10px; /* Space between cards */
+    color: var(--background-color-light);    /* White text color */
+  }
 
   .accordion .card-header .btn:hover {
     color: var(--default-color);

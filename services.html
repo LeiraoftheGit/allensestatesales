@@ -51,7 +51,7 @@
       </nav>
 
       <div class="header-social-links">
-        <a href="feedback.html" class="btn ms-3">Review Us</a>
+        <a href="feedback.html" class="btn">Review Us</a>
         <a href="https://www.estatesales.net/companies/MI/Lansing/48915/164144">
           <img src="https://www.estatesales.net/assets/images/logos/dark75.png" alt="EstateSales.NET" class="responsive-link-image1">
         </a>
@@ -87,6 +87,9 @@
           </h6>
       </div>
     </div>
+    <div class="btn-container">
+      <a class="btn" href="#SalesIFrame">Click to view Upcoming Sales</a>
+    </div>
 </section>
 
     <!-- Page Title -->
@@ -97,7 +100,9 @@
             <div class="col-lg-8">
               <h1>Services</h1>
               <p class="mb-0">Whether you're downsizing, moving, or managing a loved one's estate, our services cater to your needs. We provide a variety of estate sale options tailored to maximize the value for our clients. We offer adaptable scheduling and ensure that sales are finalized both swiftly and effectively. Every item is treated with the highest level of care, and we carry out our duties with both compassion and professionalism. Our goal is to simplify the estate sale process for you as much as possible.</p>
-              <a href="contact.html" class="cta-btn">Available to Schedule<br></a>
+              <div class="btn-container">
+                <a href="contact.html" class="btn">Available to Schedule<br></a>
+              </div>
             </div>
           </div>
         </div>
@@ -122,7 +127,7 @@
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-activity icon"></i></div>
-              <h4><a href="" class="stretched-link">Estate Sale/Liquidation</a></h4>
+              <h4><!--<a href="" class="stretched-link">-->Estate Sale/Liquidation</h4>
               <p>An estate sale or liquidation is organized when the home contains sufficient items and there is ample time, allowing for the sale of goods directly to the public, collectors, and buyers to maximize value.</p>
             </div>
           </div>
@@ -130,7 +135,7 @@
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-bounding-box-circles icon"></i></div>
-              <h4><a href="" class="stretched-link">Estate Buyout</a></h4>
+              <h4><!--<a href="" class="stretched-link">-->Estate Buyout</h4>
               <p>A convenient and speedy service, a good option for smaller sales. The entire estate will be appraised and purchased as a lump sum.</p>
             </div>
           </div>
@@ -138,7 +143,7 @@
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-calendar4-week icon"></i></div>
-              <h4><a href="" class="stretched-link">Inventory and Appraisal</a></h4>
+              <h4><!--<a href="" class="stretched-link">-->Inventory and Appraisal</h4>
               <p>Catalog and appraise items to determine their value.</p>
             </div>
           </div>
@@ -146,7 +151,7 @@
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-broadcast icon"></i></div>
-              <h4><a href="" class="stretched-link">Post-Sale Services</a></h4>
+              <h4><!--<a href="" class="stretched-link">-->Post-Sale Services</h4>
               <p>Following the sale, any remaining items can be donated or discarded, guaranteeing that you are not burdened with unwanted possessions.</p>
             </div>
           </div>
@@ -364,6 +369,23 @@
     </div>
 
   </footer>
+
+  <script>
+    window.esIFrameOptions = {
+    containerId: 'SalesIFrame', orgId: 164144, showPastSales: false};
+   
+    function addScriptToDom(id, url, async, d, s) {
+    if (d.getElementById(id)) return;
+    var e = d.createElement(s);
+    e.id = id;
+    e.type = 'text/javascript';
+    e.async = async;
+    e.src = url;
+    d.getElementsByTagName('body')[0].appendChild(e);
+    }
+   
+      addScriptToDom('esNETIFrame', 'https://www.estatesales.net/assets_/scripts/iframe/iframe-helper.js', true, document, 'script');
+    </script>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
